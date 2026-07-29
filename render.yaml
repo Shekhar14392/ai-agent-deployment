@@ -20,7 +20,7 @@ services:
     name: global-ai-solutions-backend
     runtime: docker
     plan: free
-    rootDir: backend
+    rootDir: .
     dockerfilePath: ./Dockerfile
     envVars:
       - key: SECRET_KEY
