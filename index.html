@@ -3,143 +3,143 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Global AI Solutions — Your AI Business Team</title>
-<meta name="description" content="Hire AI agents for marketing, sales, and support. Live in minutes.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Admin — Global AI Solutions</title>
 <style>
-  :root{
-    --ink:#14171F; --ink-2:#1D212C; --paper:#F6F4EF; --amber:#FFB020;
-    --teal:#2DD4BF; --slate:#8B93A7; --radius:14px;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  body{background:var(--ink); color:var(--paper); font-family:'Inter',sans-serif; line-height:1.5;}
-  a{color:inherit;}
-  .wrap{max-width:1100px; margin:0 auto; padding:0 22px;}
-
-  nav{display:flex; align-items:center; justify-content:space-between; padding:22px 0;}
-  .brand{font-family:'Fraunces',serif; font-weight:600; font-size:20px; display:flex; align-items:center; gap:9px;}
-  .brand .dot{width:9px; height:9px; border-radius:50%; background:var(--amber);}
-  nav .links a{margin-left:26px; font-size:14.5px; color:var(--slate); text-decoration:none;}
-  nav .links a:hover{color:var(--paper);}
-
-  .hero{padding:70px 0 60px; text-align:center;}
-  .hero h1{font-family:'Fraunces',serif; font-weight:600; font-size:clamp(34px,6vw,58px); line-height:1.08; max-width:820px; margin:0 auto 20px;}
-  .hero p{color:var(--slate); font-size:17px; max-width:520px; margin:0 auto 32px;}
-  .btn{display:inline-flex; align-items:center; gap:8px; background:var(--amber); color:var(--ink); font-weight:600; padding:14px 26px; border-radius:10px; text-decoration:none; border:none; cursor:pointer; font-size:15px; font-family:'Inter',sans-serif;}
-  .btn:hover{filter:brightness(1.05);}
-  .btn.ghost{background:transparent; border:1px solid rgba(255,255,255,0.2); color:var(--paper);}
-
-  section{padding:60px 0;}
-  .eyebrow{font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:.08em; font-size:11.5px; color:var(--amber); margin-bottom:10px;}
-  h2{font-family:'Fraunces',serif; font-weight:600; font-size:32px; margin-bottom:34px;}
-
-  .pricing-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
-  @media(max-width:800px){.pricing-grid{grid-template-columns:1fr;}}
-  .plan{background:var(--ink-2); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:28px;}
-  .plan.featured{border-color:var(--amber); background:#20242F;}
-  .plan .name{font-family:'Fraunces',serif; font-size:20px; font-weight:600; margin-bottom:6px;}
-  .plan .price{font-size:34px; font-weight:700; margin:14px 0 4px;}
-  .plan .price span{font-size:14px; color:var(--slate); font-weight:400;}
-  .plan ul{list-style:none; margin:20px 0 26px; color:var(--slate); font-size:14px;}
-  .plan li{margin-bottom:9px; padding-left:18px; position:relative;}
-  .plan li::before{content:"✓"; position:absolute; left:0; color:var(--teal);}
-  .plan .btn{width:100%; justify-content:center;}
-
-  footer{padding:40px 0; border-top:1px solid rgba(255,255,255,0.08); color:var(--slate); font-size:13px; text-align:center;}
-  #status-msg{max-width:520px; margin:20px auto 0; text-align:center; font-size:14px; color:var(--teal); display:none;}
+  :root{--ink:#14171F;--ink-2:#1D212C;--paper:#F6F4EF;--amber:#FFB020;--teal:#2DD4BF;--slate:#8B93A7;--danger:#FF6B6B;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--ink);color:var(--paper);font-family:-apple-system,Inter,sans-serif;}
+  .wrap{max-width:1000px;margin:0 auto;padding:24px;}
+  h1{font-size:22px;margin-bottom:4px;}
+  .sub{color:var(--slate);font-size:13px;margin-bottom:24px;}
+  #loginBox{max-width:380px;margin:80px auto;background:var(--ink-2);padding:30px;border-radius:14px;border:1px solid rgba(255,255,255,.08);}
+  input,select{width:100%;background:var(--ink);border:1px solid rgba(255,255,255,.15);color:var(--paper);padding:11px 13px;border-radius:8px;margin-bottom:12px;font-size:14px;}
+  button{background:var(--amber);color:var(--ink);border:none;font-weight:600;padding:11px 18px;border-radius:8px;cursor:pointer;font-size:14px;}
+  button:hover{filter:brightness(1.05);}
+  button.ghost{background:transparent;border:1px solid rgba(255,255,255,.2);color:var(--paper);}
+  table{width:100%;border-collapse:collapse;margin-top:10px;}
+  th,td{text-align:left;padding:10px 12px;font-size:13.5px;border-bottom:1px solid rgba(255,255,255,.07);}
+  th{color:var(--slate);font-weight:500;text-transform:uppercase;font-size:11px;letter-spacing:.05em;}
+  .status-pill{padding:3px 9px;border-radius:100px;font-size:11.5px;font-family:monospace;}
+  .pending{background:rgba(255,176,32,.15);color:var(--amber);}
+  .approved,.paid{background:rgba(45,212,191,.15);color:var(--teal);}
+  .rejected{background:rgba(255,107,107,.15);color:var(--danger);}
+  .panel{background:var(--ink-2);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:22px;margin-bottom:20px;}
+  #error{color:var(--danger);font-size:13px;margin-top:8px;display:none;}
+  .actions button{margin-right:6px;padding:5px 10px;font-size:12px;}
+  #topbar{display:flex;justify-content:space-between;align-items:center;}
 </style>
 </head>
 <body>
 
-<div class="wrap">
-  <nav>
-    <div class="brand"><span class="dot"></span>Global AI Solutions</div>
-    <div class="links">
-      <a href="#pricing">Pricing</a>
-      <a href="#" id="loginLink">Log in</a>
-    </div>
-  </nav>
+<div id="loginBox">
+  <h1>Admin login</h1>
+  <p class="sub">Sign in with your admin account.</p>
+  <input id="email" type="email" placeholder="admin@yourbusiness.com">
+  <input id="password" type="password" placeholder="Password">
+  <button style="width:100%" onclick="login()">Sign in</button>
+  <div id="error"></div>
+</div>
 
-  <div class="hero">
-    <div class="eyebrow">AI Agents for Growth</div>
-    <h1>Your AI team for marketing, sales, and support.</h1>
-    <p>Mara writes and posts your content. Rio follows up every lead. Vale answers customers 24/7. Live in minutes.</p>
-    <a href="#pricing" class="btn">See pricing →</a>
+<div class="wrap" id="dashboard" style="display:none">
+  <div id="topbar">
+    <div>
+      <h1>Admin dashboard</h1>
+      <p class="sub">Global AI Solutions — control panel</p>
+    </div>
+    <button class="ghost" onclick="logout()">Log out</button>
   </div>
 
-  <section id="pricing">
-    <div class="eyebrow">Plans</div>
-    <h2>Start free. Upgrade when you're ready.</h2>
-    <div class="pricing-grid">
-      <div class="plan">
-        <div class="name">Starter</div>
-        <div class="price">$0<span>/mo</span></div>
-        <ul>
-          <li>1 AI agent</li>
-          <li>100 AI messages/mo</li>
-          <li>Email support</li>
-        </ul>
-        <button class="btn ghost" onclick="startCheckout('starter')">Get started</button>
-      </div>
-      <div class="plan featured">
-        <div class="name">Growth</div>
-        <div class="price">$49<span>/mo</span></div>
-        <ul>
-          <li>All 3 AI agents</li>
-          <li>5,000 AI messages/mo</li>
-          <li>WhatsApp + Instagram integration</li>
-          <li>Priority support</li>
-        </ul>
-        <button class="btn" onclick="startCheckout('growth')">Subscribe now</button>
-      </div>
-      <div class="plan">
-        <div class="name">Enterprise</div>
-        <div class="price">$249<span>/mo</span></div>
-        <ul>
-          <li>Unlimited AI messages</li>
-          <li>All integrations + voice AI</li>
-          <li>Dedicated account manager</li>
-        </ul>
-        <button class="btn ghost" onclick="startCheckout('enterprise')">Subscribe now</button>
-      </div>
-    </div>
-    <div id="status-msg"></div>
-  </section>
-
-  <footer>© 2026 Global AI Solutions. <a href="/terms">Terms</a> · <a href="/privacy">Privacy</a></footer>
+  <div class="panel">
+    <h2 style="font-size:15px;margin-bottom:12px;">Withdrawal requests</h2>
+    <table>
+      <thead><tr><th>User</th><th>Amount</th><th>Method</th><th>Status</th><th>Requested</th><th>Actions</th></tr></thead>
+      <tbody id="withdrawalRows"><tr><td colspan="6" style="color:var(--slate)">Loading…</td></tr></tbody>
+    </table>
+  </div>
 </div>
 
 <script>
-async function startCheckout(plan){
-  if(plan === 'starter'){
-    window.location.href = '/signup?plan=starter';
-    return;
-  }
-  const statusEl = document.getElementById('status-msg');
-  statusEl.style.display = 'block';
-  statusEl.style.color = '#8B93A7';
-  statusEl.textContent = 'Preparing secure PayPal checkout…';
+// Same-domain deployment (self-hosted via Nginx) — no change needed.
+// If your API is on a different domain, replace with the full URL.
+const API_BASE = "/api/v1";
+let accessToken = localStorage.getItem('gai_admin_token') || null;
 
+async function login(){
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const errEl = document.getElementById('error');
+  errEl.style.display = 'none';
   try{
-    const res = await fetch('/api/create-paypal-order', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ plan })
+    const res = await fetch(`${API_BASE}/auth/login`, {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ email, password })
     });
     const data = await res.json();
-    if(data.approveUrl){
-      // Redirect to PayPal's hosted, PCI-compliant checkout page
-      window.location.href = data.approveUrl;
-    } else {
-      statusEl.style.color = '#FF6B6B';
-      statusEl.textContent = data.error || 'Could not start PayPal checkout. Please try again.';
+    if(!res.ok){ throw new Error(data.detail || 'Login failed'); }
+
+    // Verify this account is actually an admin before granting dashboard access
+    const meRes = await fetch(`${API_BASE}/auth/me`, { headers: { Authorization: `Bearer ${data.access_token}` }});
+    const me = await meRes.json();
+    if(me.role !== 'admin' && me.role !== 'super_admin'){
+      throw new Error('This account does not have admin access.');
     }
+
+    accessToken = data.access_token;
+    localStorage.setItem('gai_admin_token', accessToken);
+    showDashboard();
   }catch(err){
-    statusEl.style.color = '#FF6B6B';
-    statusEl.textContent = 'Network error — please try again.';
+    errEl.textContent = err.message;
+    errEl.style.display = 'block';
   }
 }
+
+function logout(){
+  localStorage.removeItem('gai_admin_token');
+  accessToken = null;
+  document.getElementById('dashboard').style.display = 'none';
+  document.getElementById('loginBox').style.display = 'block';
+}
+
+async function showDashboard(){
+  document.getElementById('loginBox').style.display = 'none';
+  document.getElementById('dashboard').style.display = 'block';
+  await loadWithdrawals();
+}
+
+async function loadWithdrawals(){
+  const res = await fetch(`${API_BASE}/wallet/admin/withdrawals`, { headers: { Authorization: `Bearer ${accessToken}` }});
+  const rows = document.getElementById('withdrawalRows');
+  if(!res.ok){ rows.innerHTML = '<tr><td colspan="6" style="color:var(--danger)">Could not load withdrawals — check API_BASE and admin permissions.</td></tr>'; return; }
+  const data = await res.json();
+  if(data.length === 0){ rows.innerHTML = '<tr><td colspan="6" style="color:var(--slate)">No withdrawal requests yet.</td></tr>'; return; }
+
+  rows.innerHTML = data.map(w => `
+    <tr>
+      <td>${w.user_id.slice(0,8)}…</td>
+      <td>$${Number(w.amount).toFixed(2)}</td>
+      <td>${w.payout_method}</td>
+      <td><span class="status-pill ${w.status}">${w.status}</span></td>
+      <td>${new Date(w.created_at).toLocaleDateString()}</td>
+      <td class="actions">
+        ${w.status === 'pending' ? `
+          <button onclick="decide('${w.id}','approved')">Approve</button>
+          <button class="ghost" onclick="decide('${w.id}','rejected')">Reject</button>
+        ` : '—'}
+      </td>
+    </tr>
+  `).join('');
+}
+
+async function decide(id, status){
+  await fetch(`${API_BASE}/wallet/admin/withdrawals/${id}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type':'application/json', Authorization: `Bearer ${accessToken}` },
+    body: JSON.stringify({ status })
+  });
+  await loadWithdrawals();
+}
+
+if(accessToken) showDashboard();
 </script>
 </body>
 </html>
